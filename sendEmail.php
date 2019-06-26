@@ -1,7 +1,5 @@
-<input type="text" name="test">;
-
 <?php
-;
+
     use PHPMailer\PHPMailer\PHPMailer;
 
 
@@ -124,7 +122,7 @@
                          $mail->addAttachment($dir.$checkboxvar[$i],$checkboxvar[$i]);//แนบไฟล์ใส่ path ไฟล์ที่อยู่รูปภาพ
                          $count++;
                     }
-                    var_dump($mail->send());exit();
+                    // var_dump($mail->send());exit();
                     if ($mail->send()) {
                         $status = "success";
                         $response = "Email is sent!";
@@ -135,6 +133,10 @@
                     }
                 }
         }
-    exit(json_encode(array("status" => $status, "response" => $response)));     
+
+
+ exit(json_encode(array("status" => $status, "response" => $response)));
+
+
     }
 ?>
