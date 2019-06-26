@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   
     <link rel="stylesheet" href="./css/style.css">
@@ -97,51 +98,99 @@
 
 /* Side Navigation */
 
-@media(min-width:768px) {
-    .side-nav {
-        position: fixed;
-        top: 70px;
-        left: 225px;
-        width: 225px;
-        margin-left: -225px;
-        border: none;
-        border-radius: 0;
-        border-top: 1px rgba(0,0,0,.5) solid;
-        overflow-y: auto;
-        background-color: #e6e6e6;
-        /*background-color: #5A6B7D;*/
-        bottom: 0;
-        overflow-x: hidden;
-        padding-bottom: 40px;
-    }
-
-    .side-nav>li>a {
-        width: 225px;
-        border-bottom: 1px rgba(0,0,0,.3) solid;
-    }
-
-    .side-nav li a:hover,
-    .side-nav li a:focus {
-        outline: none;
-        background-color: #1a242f !important;
-    }
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+.openSidenav{
+  cursor: pointer;
+  color: #818181;
+  background: #77b9ff;
+  position: fixed;
+  width: 35px;
+  height: 100%;
+  top: 70px;
+  left: 0;
+  padding: 35px;
 }
 
-.side-nav>li>ul {
-    padding: 0;
-    border-bottom: 1px rgba(0,0,0,.3) solid;
+.closedSidenav{
+  cursor: pointer;
+  color: #818181;
+  background: #0c0c0c;
+  position: fixed;
+  width: 35px;
+  height: 100%;
+  top: 70px;
+  left: 0;
+  padding: 35px;
+}
+.material-icons {
+  float: right;
+  position: absolute;
+  left: 15px;
+}
+.sidenav {
+  width: 0;
+  height: 100%;
+  background: #77b9ff;
+  position: fixed;
+  padding: 100;
+  padding-top: 40px;
+  font-size: 15px;
+  z-index: 1;
+  top: 70px;
+  left: 0;
+  transition: 0.5s;
+  overflow: auto;
+  color:white;
 }
 
-.side-nav>li>ul>li>a {
-    display: block;
-    padding: 10px 15px 10px 38px;
-    text-decoration: none;
-    /*color: #999;*/
-    color: #fff;    
+.sidenav > a:link {
+  padding: 2px 32px;
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  transition: 0.3s;
 }
 
-.side-nav>li>ul>li>a:hover {
+.sidenav > a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav > a:visited {
+  color: #818181;
+}
+
+.sidenav > .close {
+  float: right;
+  font-size: 36px;
+  top: 0;
+}
+
+a {
     color: #fff;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.content {
+  transition: margin-left .5s;
+  padding: 20px;
+  margin-left: 35px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .button1555 {
@@ -149,15 +198,15 @@
 }
 
 .button555 {
-  background-color: #4CAF50; /* Green */
+  background-color: #5256ba; /* blue */
   border: none;
   color: white;
-  padding: 5px 15px;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
+  font-size: 18px;
+  margin: 8px -40px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
@@ -232,13 +281,11 @@
 
         <div class="selected button5551"></div>
         <ul class="nav navbar-right top-nav">
-            <li>
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" >
+          <li style="margin-right: 200px; margin-top: 5px;" >
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" style="padding-right: 500px; margin-right: 100px; height: 50px;">
             </li>
-            <li style="padding-left:10px;">
-                <button class="btn btn-success" type="submit" >Search</button>
-            </li>
-            <li style="padding-left:10px;"><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">Send Picture</button></li>
+                       
+            <li style="padding-left:10px; margin-top: 5px;"><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary" style="height: 50px; width: 150px;">Send Picture</button></li>
 </ul>
 
 <div id="id01" class="modal">  
@@ -267,12 +314,12 @@
     <img src="EmailTesting_Icon_Aqua.png" class="logo"><br>
 </div>
       
-         <input id="email" placeholder="Email" class="form-control">
+         <input id="email" placeholder="Email" class="form-control" style="height: 50px; ">
       <input type="hidden" id="image" placeholder="image" class="form-control">
       </div>
       <div class="modal-footer">
-      <button value="Send An Email" id="show" class="btn btn-success sendEmail" >Send An Email</button>
-        <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+      <button value="Send An Email" class="btn btn-success sendEmail" style="height: 50px; width: 150px;">Send An Email</button>
+        
       </div>
     </div>
   </div>
@@ -281,10 +328,18 @@
             <li>
             </li>            
         </ul>
-        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav">
-                <li>
+
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+                    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div class="sidenav">
+                <li style="list-style: none;">
+                      <a href="#" class="close">&times;</a><br><br>
+                </li>
+                <li style="list-style: none;">       
                     <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> Show Folder <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="">
 
@@ -301,14 +356,14 @@
          ?>
                     </ul>
                 </li>
-            </ul>
-        </div>
+  </div>
+      </div>
+       <div class="content">
+    <span class="openSidenav">
+      <i class="material-icons">arrow_forward</i>
+    </span>
+  </div>
         <!-- /.navbar-collapse -->
-    </nav>
-
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="content-image">
 <?php 

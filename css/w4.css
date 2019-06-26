@@ -42,6 +42,10 @@ input[type=text]:focus, input[type=password]:focus {
   padding-top: 10px;
 }
 
+.hover-image{
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -84,4 +88,79 @@ hr {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+.openSidenav{
+  cursor: pointer;
+  color: #818181;
+  background: #0c0c0c;
+  position: fixed;
+  width: 35px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}
+.material-icons {
+  float: right;
+  
+}
+.sidenav {
+  width: 0;
+  height: 100%;
+  background: #0c0c0c;
+  position: fixed;
+  padding: 0;
+  padding-top: 40px;
+  font-size: 25px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  overflow: auto;
+}
+
+.sidenav > a:link {
+  padding: 2px 32px;
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.sidenav > a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav > a:visited {
+  color: #818181;
+}
+
+.sidenav > .close {
+  float: right;
+  font-size: 36px;
+  top: 0;
+}
+
+.content {
+  transition: margin-left .5s;
+  padding: 20px;
+  margin-left: 35px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.content-image{
+  margin: 0em 0;
 }
