@@ -1,7 +1,7 @@
 <input type="text" name="test">;
 
 <?php
-
+;
     use PHPMailer\PHPMailer\PHPMailer;
 
 
@@ -38,8 +38,8 @@
                 $mail->isSMTP();
                 $mail->Host = "smtp.gmail.com"; //host ของ  gmail , hotmail = smtp.live.com
                 $mail->SMTPAuth = true;
-                $mail->Username = "florkgum@gmail.com"; //email 
-                $mail->Password = '029031730flork'; //password
+                $mail->Username = "boontrika@bangkokwebsolution.com"; //email 
+                $mail->Password = 'boontrika'; //password
                 $mail->Port = 465; //587,25 ใช้ hotmail
                 $mail->SMTPSecure = "ssl"; //tls
 
@@ -50,18 +50,18 @@
                 // $mail->Subject = $subject;
                 // $mail->Body = $body;
 
-                $mail->Subject = 'BangkokWebSolution Co., Ltd.';
+                $mail->Subject = 'Airports of Thailand Public Co.,Ltd.';
                 $mail->Body = "
                     <!DOCTYPE html>
                         <html>
                             <head>
-                            <title>Bangkok web solution</title>
+                            <title>Airports of Thailand Public Co.,Ltd.</title>
                             </head>
                             <body> 
-                                <img src='http://www.bangkokwebsolution.com/themes/bkktheme/img/logo1.png';>
-                                <h1 style='background: #176BB6; padding: 10px; color: white;'>Bangkok Web Solution</h1>
+                                <img src='http://airportthai.co.th/wp-content/uploads/2018/04/logo.png';>
+                                <h1 style='background: #176BB6; padding: 10px; color: white;'>Airports of Thailand Public Co.,Ltd.</h1>
 
-                                <p style='background: #';>Copyright © 2019 , BangkokWebSolution Co., Ltd. All rights reserved.</p>
+                                <p style='background: #';>Copyright 2018 Airports of Thailand Public Co.,Ltd. All rights reserved.</p>
                             </body>
                         </html>
                         ";
@@ -104,18 +104,18 @@
                     // $mail->Subject = $subject;
                     // $mail->Body = $body;
 
-                    $mail->Subject = 'BangkokWebSolution Co., Ltd.';
+                    $mail->Subject = 'Airports of Thailand Public Co.,Ltd.';
                     $mail->Body = "
                         <!DOCTYPE html>
                             <html>
                                 <head>
-                                <title>Bangkok web solution</title>
+                                <title>Airports of Thailand Public Co.,Ltd.</title>
                                 </head>
                                 <body> 
-                                    <img src='http://www.bangkokwebsolution.com/themes/bkktheme/img/logo1.png';>
-                                    <h1 style='background: #176BB6; padding: 10px; color: white;'>Bangkok Web Solution</h1>
+                                    <img src='http://airportthai.co.th/wp-content/uploads/2018/04/logo.png';>
+                                    <h1 style='background: #176BB6; padding: 10px; color: white;'>Airports of Thailand Public Co.,Ltd.</h1>
 
-                                    <p style='background: #';>Copyright © 2019 , BangkokWebSolution Co., Ltd. All rights reserved.</p>
+                                    <p style='background: #';>Copyright 2018 Airports of Thailand Public Co.,Ltd. All rights reserved.</p>
                                 </body>
                             </html>
                             ";

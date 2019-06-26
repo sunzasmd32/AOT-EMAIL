@@ -100,7 +100,7 @@
 @media(min-width:768px) {
     .side-nav {
         position: fixed;
-        top: 50px;
+        top: 70px;
         left: 225px;
         width: 225px;
         margin-left: -225px;
@@ -108,7 +108,7 @@
         border-radius: 0;
         border-top: 1px rgba(0,0,0,.5) solid;
         overflow-y: auto;
-        background-color: #222;
+        background-color: #e6e6e6;
         /*background-color: #5A6B7D;*/
         bottom: 0;
         overflow-x: hidden;
@@ -201,6 +201,11 @@
 .navbar-brand {
     padding: 5px 15px;
 }
+
+.navbar-inverse2 {
+    background-color: #fff;
+    border-color: #080808;
+}
     </style>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -208,9 +213,13 @@
 <body>
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
+
 <div id="wrapper">
+
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <nav class="navbar navbar-inverse2 navbar-fixed-top" role="navigation">
+        <a href="https://www.airportthai.co.th/th/"><img src="Logo_AOT.png" style="width: auto; height: 60px;"></a>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -220,7 +229,8 @@
             </button>
         </div>
         <!-- Top Menu Items -->
-        <div class="selected button5551" style="color:"></div>
+
+        <div class="selected button5551"></div>
         <ul class="nav navbar-right top-nav">
             <li>
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" >
