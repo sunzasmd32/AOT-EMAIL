@@ -422,7 +422,7 @@
                             alert('Email Has Been Sent!');
                         }
                         else {
-                            alert('Email Has Been Sent!');
+                            alert('ERROR');
                             console.log(response);
                         }
                    }
