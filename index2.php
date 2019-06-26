@@ -278,8 +278,7 @@
   </div>
 </div>
 </li>
-            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
-                </a>
+            <li>
             </li>            
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
