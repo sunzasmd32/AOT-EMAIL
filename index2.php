@@ -232,13 +232,11 @@
 
         <div class="selected button5551"></div>
         <ul class="nav navbar-right top-nav">
-            <li>
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" >
+          <li style="margin-right: 200px; margin-top: 5px;" >
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" style="padding-right: 500px; margin-right: 100px; height: 50px;">
             </li>
-            <li style="padding-left:10px;">
-                <button class="btn btn-success" type="submit" >Search</button>
-            </li>
-            <li style="padding-left:10px;"><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">Send Picture</button></li>
+           
+            <li style="padding-left:10px; margin-top: 5px;"><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary" style="height: 50px; width: 150px;">Send Picture</button></li>
 </ul>
 
 <div id="id01" class="modal">  
@@ -267,12 +265,12 @@
     <img src="EmailTesting_Icon_Aqua.png" class="logo"><br>
 </div>
       
-         <input id="email" placeholder="Email" class="form-control">
+         <input id="email" placeholder="Email" class="form-control" style="height: 50px; ">
       <input type="hidden" id="image" placeholder="image" class="form-control">
       </div>
       <div class="modal-footer">
-      <button value="Send An Email" id="show" class="btn btn-success sendEmail" >Send An Email</button>
-        <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+      <button value="Send An Email" class="btn btn-success sendEmail" style="height: 50px; width: 150px;">Send An Email</button>
+        
       </div>
     </div>
   </div>
