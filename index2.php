@@ -6,7 +6,6 @@
 
   
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" type="text/css" href="css/w4.css">
     <link rel="stylesheet" type="text/css" href="css/emailform.css">
