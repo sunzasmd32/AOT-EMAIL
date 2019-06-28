@@ -5,7 +5,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" type="text/css" href="css/w4.css">
     <link rel="stylesheet" type="text/css" href="css/emailform.css">
@@ -313,7 +313,7 @@ a:hover, a:focus {
                     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
       <div class="sidenav">
                 <li style="list-style: none;">
-                      <a href="#" class="close">&times;</a><br><br>
+                      <a href="#" class="close btn-close">&times;</a><br><br>
                 </li>
                 <li style="list-style: none;">       
                     <a href="#" data-toggle="collapse" data-target="#submenu-1" class="text_show"><i class="fa fa-fw fa-search"></i> Show Folder <i class="fa fa-fw fa-angle-down pull-right"></i></a>
