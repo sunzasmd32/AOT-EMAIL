@@ -96,6 +96,7 @@ body {
 	a.btn-close {
 		margin-right: -18px;
 	}
+
 }
 
 @media screen and (max-width:900px) {}
@@ -132,6 +133,7 @@ body {
 
 	.tiles__tile {
 		padding: 0;
+		padding-top: -25px;
 	}
 
 	#form_search {
@@ -254,6 +256,8 @@ body {
 
 	.tiles__tile {
 		padding: 0;
+		padding-bottom: 15px;
+
 	}
 
 	#form_search {
@@ -306,6 +310,7 @@ body {
 		width: auto;
 		height: auto;
 		margin-top: -1px;
+		padding-bottom: 15px;
 
 	}
 
@@ -329,6 +334,7 @@ body {
 
 	.tiles__tile {
 		padding: 0;
+		padding-bottom: 15px;
 	}
 
 	#form_search {

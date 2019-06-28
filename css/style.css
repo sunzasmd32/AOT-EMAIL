@@ -17,8 +17,6 @@
 
 .tiles__tile {
   float: left;
-  width: 50%;
-  padding: 10px;
 }
 
 @media screen and (min-width: 480px) {
