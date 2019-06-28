@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
 }
-html {
-    overflow-x: hidden; 
-}
+
 .tiles {
   width: calc(100% - 20px);
   margin: 10px;

@@ -25,32 +25,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-@media(min-width:768px) {
-    body {
-        margin-top: 50px;
-    }
-    /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
-}
 
-#wrapper {
-    padding-left: 0;    
-}
-
-#page-wrapper {
-    width: 100%;        
-    padding: 0;
-    background-color: #fff;
-}
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 225px;
-    }
-
-    #page-wrapper {
-        padding: 22px 10px;
-    }
-}
 
 /* Top Navigation */
 
@@ -97,10 +72,13 @@
 
 /* Side Navigation */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-  font-family: 'Roboto', sans-serif;
+
+
+html,body {
+  font-family: 'Kanit', sans-serif;
+  font-size:15px;
   margin: 0;
+  overflow-x:hidden;
 }
 .openSidenav{
   cursor: pointer;
@@ -131,42 +109,42 @@ body {
   left: 15px;
 }
 .sidenav {
-  width: 0;
-  height: 100%;
-  background: #77b9ff;
-  position: fixed;
-  padding: 100;
-  padding-top: 40px;
-  font-size: 15px;
-  z-index: 1;
-  top: 70px;
-  left: 0;
-  transition: 0.5s;
-  overflow: auto;
-  color:white;
+	width: 0;
+	height: 100%;
+	background: #77b9ff;
+	position: fixed;
+	padding: 100;
+	padding-top: 40px;
+	font-size: 15px;
+	z-index: 1;
+	top: 70px;
+	left: 0;
+	transition: 0.5s;
+	overflow: auto;
+	color: white;
+}
+.sidenav>a:link {
+	padding: 2px 32px;
+	display: block;
+	text-decoration: none;
+	color: #818181;
+	transition: 0.3s;
 }
 
-.sidenav > a:link {
-  padding: 2px 32px;
-  display: block;
-  text-decoration: none;
-  color: #818181;
-  transition: 0.3s;
+.sidenav>a:hover {
+	color: #f1f1f1;
 }
 
-.sidenav > a:hover {
-  color: #f1f1f1;
+.sidenav>a:visited {
+	color: #818181;
 }
 
-.sidenav > a:visited {
-  color: #818181;
+.sidenav>.close {
+	float: right;
+	font-size: 36px;
+	top: 0;
 }
 
-.sidenav > .close {
-  float: right;
-  font-size: 36px;
-  top: 0;
-}
 
 a {
     color: #fff;
@@ -194,6 +172,7 @@ a:hover, a:focus {
 
 .button1555 {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: 'Kanit', sans-serif;
 }
 
 .button555 {
@@ -209,6 +188,7 @@ a:hover, a:focus {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
+  font-family: 'Kanit', sans-serif;
 }
 
 .button5551 {
@@ -258,7 +238,7 @@ a:hover, a:focus {
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="font-family: 'Kanit', sans-serif;">
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
 
@@ -267,7 +247,7 @@ a:hover, a:focus {
     <!-- Navigation -->
 
     <nav class="navbar navbar-inverse2 navbar-fixed-top" role="navigation">
-        <a href="https://www.airportthai.co.th/th/"><img src="Logo_AOT.png" style="width: auto; height: 60px;"></a>
+        <a href="https://www.airportthai.co.th/th/"><img src="Logo_AOT.png" style="width: auto; height: 60px;" class="logo"></a>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -281,10 +261,10 @@ a:hover, a:focus {
         <div class="selected button5551"></div>
         <ul class="nav navbar-right top-nav">
           <li style="margin-right: 200px; margin-top: 5px;" >
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" style="padding-right: 500px; margin-right: 100px; height: 50px;">
+                <input class="form-control mr-sm-2" id="form_search" type="text" placeholder="Search" style="padding-right: auto; margin-right: 100px; height: 50px; max-width:100%;">
             </li>
                        
-            <li style="padding-left:10px; margin-top: 5px;"><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary" style="height: 50px; width: 150px;">Send Picture</button></li>
+            <li style="padding-left:10px; margin-top: 5px;"><button onclick="document.getElementById('id01').style.display='block'" id="btn_search" class="btn btn-primary" style="height: 50px; width: 150px;">Send Picture</button></li>
 </ul>
 
 <div id="id01" class="modal">  
@@ -293,7 +273,7 @@ a:hover, a:focus {
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Form Email</h5>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="document.getElementById('id01').style.display='none'" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="document.getElementById('id01').style.display='none'" style="margin-top:-17px;">
           <span aria-hidden="true">&times;</span>
         </button>
 
@@ -310,7 +290,7 @@ a:hover, a:focus {
         </div>
 
 <div style="display: show;" id="show-logo">
-    <img src="EmailTesting_Icon_Aqua.png" class="logo"><br>
+    <img src="EmailTesting_Icon_Aqua.png" class="logo" id="logo_email"><br>
 </div>
       
          <input id="email" placeholder="Email" class="form-control" style="height: 50px; ">
@@ -323,10 +303,7 @@ a:hover, a:focus {
     </div>
   </div>
 </div>
-</li>
-            <li>
-            </li>            
-        </ul>
+
 
     </nav>
 
@@ -339,7 +316,7 @@ a:hover, a:focus {
                       <a href="#" class="close">&times;</a><br><br>
                 </li>
                 <li style="list-style: none;">       
-                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> Show Folder <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-1" class="text_show"><i class="fa fa-fw fa-search"></i> Show Folder <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="">
 
         <?php 
@@ -401,17 +378,17 @@ a:hover, a:focus {
       <input type="hidden" id="direct" value="<?=$dir ?>">
 
   <ul class="tiles">
-    <div class="container" style="width: auto;">
+    <div class="container" >
     <div class="row">
     <?php for($indexPicture=0;$indexPicture<$size-2;$indexPicture++){ ?>
-       <div class="col col-md-auto">
+       <div class=" col-md-5 ">
        <li class="tiles__tile">
             <div class="tiles__tile__inner">
-                 <input type="checkbox" class="canselect img sendImage" name="testImage"  id="testImage[<?=$indexPicture?>]"  value="<?=$pic_name[$indexPicture]?>">
+                 <input type="checkbox" class="canselect img sendImage" name="testImage"  id="testImage[<?=$indexPicture?>]"  value="<?=$pic_name[$indexPicture]?>" >
 
                 <label for="testImage[<?=$indexPicture?>]">Select</label>
-                <img style="width:500px; height:500px; background-size:cover;" src="<?=$pic_path[$indexPicture]?>"> 
-                <?=$pic_name[$indexPicture]?> 
+                <img class="img_show"  src="<?=$pic_path[$indexPicture]?>"> 
+                <p class="name_img"><?=$pic_name[$indexPicture]?> </p>
             </div>
         </li>
        </div>
