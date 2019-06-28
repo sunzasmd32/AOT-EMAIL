@@ -289,6 +289,10 @@ body {
 	a.btn-close {
 		margin-right: -18px;
 	}
+
+	input.button555 {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width:320px)and (min-width:200px) {
@@ -359,6 +363,11 @@ body {
 
 	a.btn-close {
 		margin-right: -18px;
+	}
+
+	input.button555 {
+		padding: 4px 4px;
+		font-size: 14px;
 	}
 }
 

@@ -185,6 +185,7 @@ a:hover, a:focus {
   display: inline-block;
   font-size: 18px;
   margin: 8px -40px;
+  border-radius: 3px 3px 3px 3px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
